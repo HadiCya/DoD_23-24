@@ -19,17 +19,20 @@ namespace DoD_23_24
 {
 	public class World
 	{
-
+		JohnA john;
         public World()
 		{
+			john = new JohnA("DiceFace3", new Vector2(50, 50), new Vector2(50, 50), true);
         }
-
+		
 		public virtual void Update(GameTime gameTime)
 		{
+			john.Update(gameTime);
 		}
 
 		public virtual void Draw()
 		{
+			john.Draw();
 		}
 
 
