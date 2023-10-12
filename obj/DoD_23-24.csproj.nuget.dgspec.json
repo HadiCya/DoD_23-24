@@ -39,11 +39,19 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "LDtkMonogame": {
+              "target": "Package",
+              "version": "[1.1.2, )"
+            },
             "MonoGame.Content.Builder.Task": {
               "target": "Package",
               "version": "[3.8.1.303, )"
             },
             "MonoGame.Extended": {
+              "target": "Package",
+              "version": "[3.8.0, )"
+            },
+            "MonoGame.Extended.Content.Pipeline": {
               "target": "Package",
               "version": "[3.8.0, )"
             },
