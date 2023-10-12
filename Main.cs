@@ -3,7 +3,6 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 
 namespace DoD_23_24;
-
 public class Main : Game
 {
     private GraphicsDeviceManager _graphics;
@@ -13,8 +12,8 @@ public class Main : Game
     public Main()
     {
         _graphics = new GraphicsDeviceManager(this);
-        _graphics.PreferredBackBufferWidth = (int)Globals.screenRes.X;
-        _graphics.PreferredBackBufferHeight = (int)Globals.screenRes.Y;
+        _graphics.PreferredBackBufferWidth = Globals.WIDTH;
+        _graphics.PreferredBackBufferHeight = Globals.HEIGHT;
         Content.RootDirectory = "Content";
         IsMouseVisible = true;
     }
@@ -22,6 +21,7 @@ public class Main : Game
     protected override void Initialize()
     {
         // TODO: Add your initialization logic here
+
 
         base.Initialize();
     }

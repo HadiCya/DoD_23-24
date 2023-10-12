@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "hToBMiOwBlb7X1eY3mXzL+h8W5gDft7J8CCrIrGpr4MUW79apnsGGY1z8grGG8h0AP05O2tSBYAmoEIt0ipgSw==",
+  "dgSpecHash": "9iqha/Ngsu4i575Rz0sZnRXr9OB92nv6sOGuKaDpCAQUhsnXjvl57DYKycxgsWVa1dKYTfB+TFhj5iqlEctqqA==",
   "success": true,
   "projectFilePath": "/Users/hadi/Desktop/DoD_23-24/DoD_23-24.csproj",
   "expectedPackageFiles": [
@@ -12,7 +12,10 @@
     "/Users/hadi/.nuget/packages/monogame.extended.graphics/3.8.0/monogame.extended.graphics.3.8.0.nupkg.sha512",
     "/Users/hadi/.nuget/packages/monogame.extended.tiled/3.8.0/monogame.extended.tiled.3.8.0.nupkg.sha512",
     "/Users/hadi/.nuget/packages/monogame.framework.desktopgl/3.8.1.303/monogame.framework.desktopgl.3.8.1.303.nupkg.sha512",
-    "/Users/hadi/.nuget/packages/newtonsoft.json/12.0.3/newtonsoft.json.12.0.3.nupkg.sha512"
+    "/Users/hadi/.nuget/packages/newtonsoft.json/12.0.3/newtonsoft.json.12.0.3.nupkg.sha512",
+    "/Users/hadi/.nuget/packages/system.runtime.compilerservices.unsafe/6.0.0/system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
+    "/Users/hadi/.nuget/packages/system.text.encodings.web/7.0.0/system.text.encodings.web.7.0.0.nupkg.sha512",
+    "/Users/hadi/.nuget/packages/system.text.json/7.0.3/system.text.json.7.0.3.nupkg.sha512"
   ],
   "logs": []
 }

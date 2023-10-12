@@ -12,6 +12,7 @@ using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Media;
+
 #endregion
 
 namespace DoD_23_24
@@ -21,7 +22,7 @@ namespace DoD_23_24
 
         public World()
 		{
-		}
+        }
 
 		public virtual void Update(GameTime gameTime)
 		{

@@ -28,3 +28,7 @@
 /Users/hadi/Desktop/DoD_23-24/bin/Debug/net6.0/Autofac.dll
 /Users/hadi/Desktop/DoD_23-24/bin/Debug/net6.0/MonoGame.Extended.Graphics.dll
 /Users/hadi/Desktop/DoD_23-24/bin/Debug/net6.0/MonoGame.Extended.Tiled.dll
+/Users/hadi/Desktop/DoD_23-24/bin/Debug/net6.0/LDtkMonogame.dll
+/Users/hadi/Desktop/DoD_23-24/bin/Debug/net6.0/System.Text.Encodings.Web.dll
+/Users/hadi/Desktop/DoD_23-24/bin/Debug/net6.0/System.Text.Json.dll
+/Users/hadi/Desktop/DoD_23-24/bin/Debug/net6.0/runtimes/browser/lib/net6.0/System.Text.Encodings.Web.dll
