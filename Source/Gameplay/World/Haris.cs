@@ -12,32 +12,25 @@ using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Media;
-
 #endregion
-
 namespace DoD_23_24
 {
-	public class World
-	{
-		Player player;
-		Haris haris;
+    public class Haris : Basic2D
+    {
 
-        public World()
-		{
-			player = new Player("/Content/2D/Ninja.png", new Vector2(Globals.WIDTH / 2, Globals.HEIGHT / 2), new Vector2(50, 50), true);
+        public Haris(string PATH, Vector2 POS, Vector2 DIMS, bool shouldScale) : base(PATH, POS, DIMS, shouldScale)
+        {
         }
 
-		public virtual void Update(GameTime gameTime)
-		{
-			player.Update(gameTime);
-		}
+        public override void Update(GameTime gameTime)
+        {
+            base.Update(gameTime);
+        }
 
-		public virtual void Draw()
-		{
-			player.Draw();
-		}
-
-
-	}
+        public override void Draw()
+        {
+            base.Draw();
+        }
+    }
 }
 
