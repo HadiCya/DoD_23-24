@@ -17,22 +17,27 @@ using Microsoft.Xna.Framework.Media;
 
 namespace DoD_23_24
 {
-	public class World
-	{
+    public class World
+    {
+        Player player;
+        Chandler chandler;
 
         public World()
-		{
+        {
+            chandler = new Chandler("Smile", new Vector2(Globals.WIDTH / 2, Globals.HEIGHT / 2), new Vector2(50, 50), true);
         }
 
-		public virtual void Update(GameTime gameTime)
-		{
-		}
+        public virtual void Update(GameTime gameTime)
+        {
+            chandler.Update(gameTime);
+        }
 
-		public virtual void Draw()
-		{
-		}
+        public virtual void Draw()
+        {
+            chandler.Draw();
+        }
 
 
-	}
+    }
 }
 
