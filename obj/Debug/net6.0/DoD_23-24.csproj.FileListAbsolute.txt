@@ -23,3 +23,5 @@
 /Users/hadi/Desktop/DoD_23-24/obj/Debug/net6.0/DoD_23-24.pdb
 /Users/hadi/Desktop/DoD_23-24/obj/Debug/net6.0/DoD_23-24.genruntimeconfig.cache
 /Users/hadi/Desktop/DoD_23-24/obj/Debug/net6.0/ref/DoD_23-24.dll
+/Users/hadi/Desktop/DoD_23-24/bin/Debug/net6.0/MonoGame.Extended.dll
+/Users/hadi/Desktop/DoD_23-24/bin/Debug/net6.0/Newtonsoft.Json.dll
