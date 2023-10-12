@@ -17,6 +17,7 @@ namespace DoD_23_24
 {
     public class JohnA : Basic2D
     {
+        int dashSpeed = 1;
 
         public JohnA(string PATH, Vector2 POS, Vector2 DIMS, bool shouldScale) : base(PATH, POS, DIMS, shouldScale)
         {
@@ -27,19 +28,28 @@ namespace DoD_23_24
             var kstate = Keyboard.GetState();
             if (kstate.IsKeyDown(Keys.Up))
             {
-                pos.Y -= 1;
+                pos.Y -= 1 * dashSpeed;
             }
             else if (kstate.IsKeyDown(Keys.Down))
             {
-                pos.Y += 1;
+                pos.Y += 1 * dashSpeed;
             }
             if (kstate.IsKeyDown(Keys.Right))
             {
-                pos.X += 1;
+                pos.X += 1 * dashSpeed;
             }
             else if (kstate.IsKeyDown(Keys.Left))
             {
-                pos.X -= 1;
+                pos.X -= 1 * dashSpeed;
+            }
+
+            if (kstate.IsKeyDown(Keys.Space))
+            {
+                dashSpeed = 10;
+            }
+            else if (kstate.IsKeyUp(Keys.Space))
+            {
+                dashSpeed = 1;
             }
 
             base.Update(gameTime);
