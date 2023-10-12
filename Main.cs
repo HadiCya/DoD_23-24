@@ -4,14 +4,17 @@ using Microsoft.Xna.Framework.Input;
 
 namespace DoD_23_24;
 
-public class Game1 : Game
+public class Main : Game
 {
     private GraphicsDeviceManager _graphics;
-    private SpriteBatch _spriteBatch;
 
-    public Game1()
+    World world;
+
+    public Main()
     {
         _graphics = new GraphicsDeviceManager(this);
+        _graphics.PreferredBackBufferWidth = (int)Globals.screenRes.X;
+        _graphics.PreferredBackBufferHeight = (int)Globals.screenRes.Y;
         Content.RootDirectory = "Content";
         IsMouseVisible = true;
     }
@@ -25,9 +28,12 @@ public class Game1 : Game
 
     protected override void LoadContent()
     {
-        _spriteBatch = new SpriteBatch(GraphicsDevice);
+        Globals.content = this.Content;
+        Globals.spriteBatch = new SpriteBatch(GraphicsDevice);
 
         // TODO: use this.Content to load your game content here
+
+        world = new World();
     }
 
     protected override void Update(GameTime gameTime)
@@ -37,14 +43,23 @@ public class Game1 : Game
 
         // TODO: Add your update logic here
 
+        world.Update(gameTime);
+
         base.Update(gameTime);
     }
 
     protected override void Draw(GameTime gameTime)
     {
-        GraphicsDevice.Clear(Color.CornflowerBlue);
+        GraphicsDevice.Clear(Color.Black);
+        
 
         // TODO: Add your drawing code here
+
+        Globals.spriteBatch.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend);
+
+        world.Draw();
+
+        Globals.spriteBatch.End();
 
         base.Draw(gameTime);
     }
