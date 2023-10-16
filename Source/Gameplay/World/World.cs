@@ -19,17 +19,19 @@ namespace DoD_23_24
 {
 	public class World
 	{
-
         public World()
 		{
+			
         }
 
-		public virtual void Update(GameTime gameTime)
+		public virtual void Update(GameTime gameTime, Maheel maheel)
 		{
+			maheel.Update(gameTime);
 		}
 
-		public virtual void Draw()
+		public virtual void Draw(Maheel maheel)
 		{
+			maheel.Draw();
 		}
 
 

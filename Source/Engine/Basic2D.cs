@@ -29,7 +29,7 @@ namespace DoD_23_24
 			dims = new Vector2(myModel.Width * (shouldScale ? scale : 1.0f), myModel.Height * (shouldScale ? scale : 1.0f));
         }
 
-		public virtual void Update(GameTime gameTime)
+        public virtual void Update(GameTime gameTime)
 		{
 
 		}

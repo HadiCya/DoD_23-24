@@ -6,6 +6,9 @@ namespace DoD_23_24;
 public class Main : Game
 {
     private GraphicsDeviceManager _graphics;
+    Texture2D maheelTexture;
+    Maheel maheel;
+    Vector2 POS;
 
     World world;
 
@@ -24,6 +27,7 @@ public class Main : Game
 
 
         base.Initialize();
+
     }
 
     protected override void LoadContent()
@@ -32,6 +36,7 @@ public class Main : Game
         Globals.spriteBatch = new SpriteBatch(GraphicsDevice);
 
         // TODO: use this.Content to load your game content here
+        maheel = new Maheel("megaman", POS = new Vector2(100,100), new Vector2(100, 100), true);
 
         world = new World();
     }
@@ -43,7 +48,14 @@ public class Main : Game
 
         // TODO: Add your update logic here
 
-        world.Update(gameTime);
+        world.Update(gameTime, maheel);
+
+        maheel.PelletInstance?.Update(gameTime);
+
+        if (maheel.PelletInstance != null && maheel.PelletInstance.pos.X > Globals.WIDTH)
+        {
+            maheel.PelletInstance = null;
+        }
 
         base.Update(gameTime);
     }
@@ -57,7 +69,7 @@ public class Main : Game
 
         Globals.spriteBatch.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend);
 
-        world.Draw();
+        world.Draw(maheel);
 
         Globals.spriteBatch.End();
 
