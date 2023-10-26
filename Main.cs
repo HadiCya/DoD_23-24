@@ -31,7 +31,6 @@ public class Main : Game
         Globals.spriteBatch = new SpriteBatch(GraphicsDevice);
         Globals.graphics = GraphicsDevice;
 
-        // TODO: use this.Content to load your game content here
         world = new World();
     }
 

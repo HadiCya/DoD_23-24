@@ -472,3 +472,13 @@ monodroid*.msi
 *.VC.opendb
 
 artifacts/
+bin/Debug/net6.0/DoD_23-24.deps.json
+bin/Debug/net6.0/DoD_23-24.dll
+bin/Debug/net6.0/DoD_23-24.pdb
+Content/obj/DesktopGL/net6.0/Content/.mgstats
+*.cache
+obj/DoD_23-24.csproj.nuget.g.props
+obj/DoD_23-24.csproj.nuget.g.targets
+obj/project.assets.json
+*.cache
+obj/project.nuget.cache

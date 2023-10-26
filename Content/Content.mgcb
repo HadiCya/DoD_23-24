@@ -14,6 +14,17 @@
 
 #---------------------------------- Content ---------------------------------#
 
+#begin 2D/Sprites/DialogueBox.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:2D/Sprites/DialogueBox.png
 
 #begin 2D/Sprites/Item.png
 /build:2D/Sprites/Item.png
@@ -36,6 +47,8 @@
 /build:LevelTiles/[A]Dirt_pipo.tsx
 
 #begin LevelTiles/[A]Flower_pipo.png
+
+#begin 2D/Sprites/Special1.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -158,3 +171,11 @@
 /importer:TiledMapImporter
 /processor:TiledMapProcessor
 /build:LevelTiles/samplemap.tmx
+/build:2D/Sprites/Special1.png
+
+#begin 2D/UI/DefaultFont.spritefont
+/importer:FontDescriptionImporter
+/processor:FontDescriptionProcessor
+/processorParam:PremultiplyAlpha=True
+/processorParam:TextureFormat=Compressed
+/build:2D/UI/DefaultFont.spritefont

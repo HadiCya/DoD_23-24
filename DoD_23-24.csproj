@@ -57,7 +57,6 @@
     <PackageReference Include="MonoGame.Extended.Tweening" Version="3.9.0-alpha0107" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Content\2D\" />
     <Folder Include="Content\Audio\" />
     <Folder Include="Content\Fonts\" />
     <Folder Include="Content\LevelTiles\" />

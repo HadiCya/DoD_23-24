@@ -1,29 +1,123 @@
 {
   "version": 2,
-  "dgSpecHash": "GBjPSgT8Oo0WBfMPT5wntEoD9vSUk8qF5ww85AcXgdrXEosjzjLwv9ROoTRlH6AKeQot2IbQxHRA0bJWZZ1WmQ==",
-  "success": true,
-  "projectFilePath": "/Users/hadi/Desktop/DoD_23-24/DoD_23-24.csproj",
+  "dgSpecHash": "5Vt8FLwXdENEQLy9qSGzZMb8jZoP/rKZ4F1z/GAKdtm6w29pXljGOBJgLs0GsKU6IFOI2kHmLUwt98RZM2SqAA==",
+  "success": false,
+  "projectFilePath": "C:\\Users\\User\\Documents\\GitHub\\DoD_23-24\\DoD_23-24.csproj",
   "expectedPackageFiles": [
-    "/Users/hadi/.nuget/packages/autofac/5.2.0/autofac.5.2.0.nupkg.sha512",
-    "/Users/hadi/.nuget/packages/monogame.content.builder.task/3.8.1.303/monogame.content.builder.task.3.8.1.303.nupkg.sha512",
-    "/Users/hadi/.nuget/packages/monogame.extended/3.9.0-alpha0107/monogame.extended.3.9.0-alpha0107.nupkg.sha512",
-    "/Users/hadi/.nuget/packages/monogame.extended.collisions/3.9.0-alpha0107/monogame.extended.collisions.3.9.0-alpha0107.nupkg.sha512",
-    "/Users/hadi/.nuget/packages/monogame.extended.content.pipeline/3.9.0-alpha0107/monogame.extended.content.pipeline.3.9.0-alpha0107.nupkg.sha512",
-    "/Users/hadi/.nuget/packages/monogame.extended.entities/3.9.0-alpha0107/monogame.extended.entities.3.9.0-alpha0107.nupkg.sha512",
-    "/Users/hadi/.nuget/packages/monogame.extended.graphics/3.9.0-alpha0107/monogame.extended.graphics.3.9.0-alpha0107.nupkg.sha512",
-    "/Users/hadi/.nuget/packages/monogame.extended.gui/3.9.0-alpha0107/monogame.extended.gui.3.9.0-alpha0107.nupkg.sha512",
-    "/Users/hadi/.nuget/packages/monogame.extended.input/3.9.0-alpha0107/monogame.extended.input.3.9.0-alpha0107.nupkg.sha512",
-    "/Users/hadi/.nuget/packages/monogame.extended.particles/3.9.0-alpha0107/monogame.extended.particles.3.9.0-alpha0107.nupkg.sha512",
-    "/Users/hadi/.nuget/packages/monogame.extended.scenegraphs/3.9.0-alpha0045/monogame.extended.scenegraphs.3.9.0-alpha0045.nupkg.sha512",
-    "/Users/hadi/.nuget/packages/monogame.extended.tiled/3.9.0-alpha0107/monogame.extended.tiled.3.9.0-alpha0107.nupkg.sha512",
-    "/Users/hadi/.nuget/packages/monogame.extended.transform/3.8.0-pullrequest0677-0089/monogame.extended.transform.3.8.0-pullrequest0677-0089.nupkg.sha512",
-    "/Users/hadi/.nuget/packages/monogame.extended.tweening/3.9.0-alpha0107/monogame.extended.tweening.3.9.0-alpha0107.nupkg.sha512",
-    "/Users/hadi/.nuget/packages/monogame.framework.desktopgl/3.8.1.303/monogame.framework.desktopgl.3.8.1.303.nupkg.sha512",
-    "/Users/hadi/.nuget/packages/newtonsoft.json/13.0.1/newtonsoft.json.13.0.1.nupkg.sha512",
-    "/Users/hadi/.nuget/packages/stylecop.analyzers/1.1.118/stylecop.analyzers.1.1.118.nupkg.sha512",
-    "/Users/hadi/.nuget/packages/system.runtime.compilerservices.unsafe/6.0.0/system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
-    "/Users/hadi/.nuget/packages/system.text.encodings.web/7.0.0/system.text.encodings.web.7.0.0.nupkg.sha512",
-    "/Users/hadi/.nuget/packages/system.text.json/7.0.3/system.text.json.7.0.3.nupkg.sha512"
+    "C:\\Users\\User\\.nuget\\packages\\monogame.content.builder.task\\3.8.1.303\\monogame.content.builder.task.3.8.1.303.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\monogame.framework.desktopgl\\3.8.1.303\\monogame.framework.desktopgl.3.8.1.303.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\system.text.encodings.web\\7.0.0\\system.text.encodings.web.7.0.0.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\system.text.json\\7.0.3\\system.text.json.7.0.3.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1102",
+      "level": "Error",
+      "message": "Unable to find package MonoGame.Extended.Gui with version (>= 3.9.0-alpha0107)\r\n  - Found 9 version(s) in nuget.org [ Nearest version: 3.8.0 ]\r\n  - Found 0 version(s) in Microsoft Visual Studio Offline Packages",
+      "libraryId": "MonoGame.Extended.Gui",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    },
+    {
+      "code": "NU1102",
+      "level": "Error",
+      "message": "Unable to find package MonoGame.Extended.Collisions with version (>= 3.9.0-alpha0107)\r\n  - Found 3 version(s) in nuget.org [ Nearest version: 3.8.0 ]\r\n  - Found 0 version(s) in Microsoft Visual Studio Offline Packages",
+      "libraryId": "MonoGame.Extended.Collisions",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    },
+    {
+      "code": "NU1102",
+      "level": "Error",
+      "message": "Unable to find package MonoGame.Extended.Content.Pipeline with version (>= 3.9.0-alpha0107)\r\n  - Found 8 version(s) in nuget.org [ Nearest version: 3.8.0 ]\r\n  - Found 0 version(s) in Microsoft Visual Studio Offline Packages",
+      "libraryId": "MonoGame.Extended.Content.Pipeline",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    },
+    {
+      "code": "NU1102",
+      "level": "Error",
+      "message": "Unable to find package MonoGame.Extended.Graphics with version (>= 3.9.0-alpha0107)\r\n  - Found 9 version(s) in nuget.org [ Nearest version: 3.8.0 ]\r\n  - Found 0 version(s) in Microsoft Visual Studio Offline Packages",
+      "libraryId": "MonoGame.Extended.Graphics",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    },
+    {
+      "code": "NU1102",
+      "level": "Error",
+      "message": "Unable to find package MonoGame.Extended.Particles with version (>= 3.9.0-alpha0107)\r\n  - Found 9 version(s) in nuget.org [ Nearest version: 3.8.0 ]\r\n  - Found 0 version(s) in Microsoft Visual Studio Offline Packages",
+      "libraryId": "MonoGame.Extended.Particles",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    },
+    {
+      "code": "NU1102",
+      "level": "Error",
+      "message": "Unable to find package MonoGame.Extended.Tiled with version (>= 3.9.0-alpha0107)\r\n  - Found 9 version(s) in nuget.org [ Nearest version: 3.8.0 ]\r\n  - Found 0 version(s) in Microsoft Visual Studio Offline Packages",
+      "libraryId": "MonoGame.Extended.Tiled",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    },
+    {
+      "code": "NU1102",
+      "level": "Error",
+      "message": "Unable to find package MonoGame.Extended with version (>= 3.9.0-alpha0107)\r\n  - Found 16 version(s) in nuget.org [ Nearest version: 3.8.0 ]\r\n  - Found 0 version(s) in Microsoft Visual Studio Offline Packages",
+      "libraryId": "MonoGame.Extended",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    },
+    {
+      "code": "NU1102",
+      "level": "Error",
+      "message": "Unable to find package MonoGame.Extended.SceneGraphs with version (>= 3.9.0-alpha0045)\r\n  - Found 9 version(s) in nuget.org [ Nearest version: 3.8.0 ]\r\n  - Found 0 version(s) in Microsoft Visual Studio Offline Packages",
+      "libraryId": "MonoGame.Extended.SceneGraphs",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    },
+    {
+      "code": "NU1102",
+      "level": "Error",
+      "message": "Unable to find package MonoGame.Extended.Entities with version (>= 3.9.0-alpha0107)\r\n  - Found 9 version(s) in nuget.org [ Nearest version: 3.8.0 ]\r\n  - Found 0 version(s) in Microsoft Visual Studio Offline Packages",
+      "libraryId": "MonoGame.Extended.Entities",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    },
+    {
+      "code": "NU1102",
+      "level": "Error",
+      "message": "Unable to find package MonoGame.Extended.Input with version (>= 3.9.0-alpha0107)\r\n  - Found 9 version(s) in nuget.org [ Nearest version: 3.8.0 ]\r\n  - Found 0 version(s) in Microsoft Visual Studio Offline Packages",
+      "libraryId": "MonoGame.Extended.Input",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    },
+    {
+      "code": "NU1102",
+      "level": "Error",
+      "message": "Unable to find package MonoGame.Extended.Tweening with version (>= 3.9.0-alpha0107)\r\n  - Found 9 version(s) in nuget.org [ Nearest version: 3.8.0 ]\r\n  - Found 0 version(s) in Microsoft Visual Studio Offline Packages",
+      "libraryId": "MonoGame.Extended.Tweening",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    },
+    {
+      "code": "NU1101",
+      "level": "Error",
+      "message": "Unable to find package MonoGame.Extended.Transform. No packages exist with this id in source(s): Microsoft Visual Studio Offline Packages, nuget.org",
+      "libraryId": "MonoGame.Extended.Transform",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    }
+  ]
 }

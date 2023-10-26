@@ -35,7 +35,6 @@ namespace DoD_23_24
 
         public override void Draw()
         {
-
             base.Draw();
         }
 
@@ -62,8 +61,6 @@ namespace DoD_23_24
             {
                 pos.X += speed * (float)gameTime.ElapsedGameTime.TotalSeconds;
             }
-
-            
         }
     }
 }
