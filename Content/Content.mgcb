@@ -46,9 +46,12 @@
 /processor:TiledMapTilesetProcessor
 /build:LevelTiles/[A]Dirt_pipo.tsx
 
-#begin LevelTiles/[A]Flower_pipo.png
+
 
 #begin 2D/Sprites/Special1.png
+/build:2D/Sprites/Special1.png
+
+#begin LevelTiles/[A]Flower_pipo.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -171,7 +174,6 @@
 /importer:TiledMapImporter
 /processor:TiledMapProcessor
 /build:LevelTiles/samplemap.tmx
-/build:2D/Sprites/Special1.png
 
 #begin 2D/UI/DefaultFont.spritefont
 /importer:FontDescriptionImporter
