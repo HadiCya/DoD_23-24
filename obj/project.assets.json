@@ -669,6 +669,7 @@
       "MonoGame.Content.Builder.Task >= 3.8.1.303",
       "MonoGame.Extended >= 3.8.0",
       "MonoGame.Extended.Content.Pipeline >= 3.8.0",
+      "MonoGame.Extended.Tiled >= 3.8.0",
       "MonoGame.Framework.DesktopGL >= 3.8.1.303",
       "system.text.json >= 7.0.3"
     ]
@@ -724,6 +725,10 @@
             "version": "[3.8.0, )"
           },
           "MonoGame.Extended.Content.Pipeline": {
+            "target": "Package",
+            "version": "[3.8.0, )"
+          },
+          "MonoGame.Extended.Tiled": {
             "target": "Package",
             "version": "[3.8.0, )"
           },
