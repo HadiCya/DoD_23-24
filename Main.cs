@@ -11,11 +11,11 @@ public class Main : Game
 
     public Main()
     {
-        _graphics = new GraphicsDeviceManager(this);
-        _graphics.PreferredBackBufferWidth = Globals.WIDTH;
-        _graphics.PreferredBackBufferHeight = Globals.HEIGHT;
-        Content.RootDirectory = "Content";
-        IsMouseVisible = true;
+        this._graphics = new GraphicsDeviceManager(this);
+        this._graphics.PreferredBackBufferWidth = Globals.WIDTH;
+        this._graphics.PreferredBackBufferHeight = Globals.HEIGHT;
+        this.Content.RootDirectory = "Content";
+        this.IsMouseVisible = true;
     }
 
     protected override void Initialize()
@@ -28,8 +28,9 @@ public class Main : Game
     protected override void LoadContent()
     {
         Globals.content = this.Content;
-        Globals.spriteBatch = new SpriteBatch(GraphicsDevice);
-        Globals.graphics = GraphicsDevice;
+        Globals.spriteBatch = new SpriteBatch(this.GraphicsDevice);
+        Globals.graphics = this.GraphicsDevice;
+        Globals.window = this.Window;
 
         // TODO: use this.Content to load your game content here
         world = new World();

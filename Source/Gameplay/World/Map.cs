@@ -23,27 +23,33 @@ using MonoGame.Extended;
 
 namespace DoD_23_24
 {
-	public class World
-	{
+    public class Map
+    {
 
-        Map map;
+        TiledMap _tiledMap;
+        TiledMapRenderer _tiledMapRenderer;
+        Camera camera;
 
-        public World()
-		{
-            map = new Map();
+        public Map()
+        {
+            _tiledMap = Globals.content.Load<TiledMap>("LevelTiles/samplemap");
+            _tiledMapRenderer = new TiledMapRenderer(Globals.graphics, _tiledMap);
+            camera = new Camera();
         }
 
-		public virtual void Update(GameTime gameTime)
-		{
-            map.Update(gameTime);
+        public virtual void Update(GameTime gameTime)
+        {
+            _tiledMapRenderer.Update(gameTime);
+
+            camera.Update(gameTime);
         }
 
         public virtual void Draw()
-		{
-            map.Draw();
+        {
+            _tiledMapRenderer.Draw(camera.getView());
         }
 
 
-	}
+    }
 }
 

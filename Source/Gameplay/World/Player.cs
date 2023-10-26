@@ -51,7 +51,7 @@ namespace DoD_23_24
             if (kstate.IsKeyDown(Keys.Down))
             {
                 pos.Y += speed * (float)gameTime.ElapsedGameTime.TotalSeconds;
-            } 
+            }
             
             if (kstate.IsKeyDown(Keys.Left))
             {
