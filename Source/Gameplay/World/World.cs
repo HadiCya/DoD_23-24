@@ -23,57 +23,34 @@ using MonoGame.Extended;
 
 namespace DoD_23_24
 {
-	public class World
-	{
-        TiledMap _tiledMap;
-        TiledMapRenderer _tiledMapRenderer;
+    public class World
+    {
+        Map map;
+        Player playerInstance;
+        NPC npcInstance;
+        Dialogue dialogueInstance;
+        List<string> conversation = new List<string> { "Hello", "I am book." };
 
         public World()
-		{
-            _tiledMap = Globals.content.Load<TiledMap>("LevelTiles/samplemap");
-            _tiledMapRenderer = new TiledMapRenderer(Globals.graphics, _tiledMap);
-
-		Player playerInstance;
-		NPC npcInstance;
-		Dialogue dialogueInstance;
-
-		List<string> conversation = new List<string> { "Hello", "I am book." };
-
-        public World()
-		{
+        {
+            map = new Map();
             playerInstance = new Player("2D/Sprites/Item", new Vector2(500, 100), new Vector2(32, 32), true);
             npcInstance = new NPC("2D/Sprites/Special1", new Vector2(700, 100), new Vector2(32, 32), true, dialogueInstance);
             dialogueInstance = new Dialogue(conversation);
-
-        }
-
-        Map map;
-
-        public World()
-		{
-            map = new Map();
         }
 
         public virtual void Update(GameTime gameTime)
-		{
+        {
             map.Update(gameTime);
         }
 
         public virtual void Draw()
-		{
-            _tiledMapRenderer.Draw();
-            playerInstance.Update(gameTime);
-			dialogueInstance.Update(gameTime);
-		}
+        {
+            playerInstance.Draw();
+            npcInstance.Draw();
+            dialogueInstance.Draw();
             map.Draw();
         }
-
-		public virtual void Draw()
-		{
-			playerInstance.Draw();
-            npcInstance.Draw();
-			dialogueInstance.Draw();
-		}
-	}
+    }
 }
 
