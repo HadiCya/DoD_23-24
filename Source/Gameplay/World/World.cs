@@ -19,17 +19,20 @@ namespace DoD_23_24
 {
 	public class World
 	{
-
-        public World()
+		Player playerInstance;
+        public World(Player player)
 		{
+			playerInstance = player;
         }
 
 		public virtual void Update(GameTime gameTime)
 		{
+            playerInstance.Update(gameTime);
 		}
 
 		public virtual void Draw()
 		{
+			playerInstance.Draw();
 		}
 
 
