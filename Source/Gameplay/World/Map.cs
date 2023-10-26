@@ -34,6 +34,7 @@ namespace DoD_23_24
         {
             _tiledMap = Globals.content.Load<TiledMap>("LevelTiles/samplemap");
             _tiledMapRenderer = new TiledMapRenderer(Globals.graphics, _tiledMap);
+            Globals.collision = _tiledMap.GetLayer<TiledMapTileLayer>("Collision");
             camera = new Camera();
         }
 
