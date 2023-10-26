@@ -10,11 +10,15 @@
 
 #-------------------------------- References --------------------------------#
 
-/reference:../../../.nuget/packages/monogame.extended.content.pipeline/3.8.0/tools/MonoGame.Extended.Content.Pipeline.dll
+/reference:../../../.nuget/packages/monogame.extended.content.pipeline/3.9.0-alpha0107/tools/MonoGame.Extended.Content.Pipeline.dll
 
 #---------------------------------- Content ---------------------------------#
 
+
 #begin 2D/Sprites/Item.png
+/build:2D/Sprites/Item.png
+
+#begin LevelTiles/[A]Dirt_pipo.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -24,5 +28,133 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:2D/Sprites/Item.png
+/build:LevelTiles/[A]Dirt_pipo.png
 
+#begin LevelTiles/[A]Dirt_pipo.tsx
+/importer:TiledMapTilesetImporter
+/processor:TiledMapTilesetProcessor
+/build:LevelTiles/[A]Dirt_pipo.tsx
+
+#begin LevelTiles/[A]Flower_pipo.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:LevelTiles/[A]Flower_pipo.png
+
+#begin LevelTiles/[A]Flower_pipo.tsx
+/importer:TiledMapTilesetImporter
+/processor:TiledMapTilesetProcessor
+/build:LevelTiles/[A]Flower_pipo.tsx
+
+#begin LevelTiles/[A]Grass_pipo.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:LevelTiles/[A]Grass_pipo.png
+
+#begin LevelTiles/[A]Grass_pipo.tsx
+/importer:TiledMapTilesetImporter
+/processor:TiledMapTilesetProcessor
+/build:LevelTiles/[A]Grass_pipo.tsx
+
+#begin LevelTiles/[A]Wall-Up_pipo.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:LevelTiles/[A]Wall-Up_pipo.png
+
+#begin LevelTiles/[A]Wall-Up_pipo.tsx
+/importer:TiledMapTilesetImporter
+/processor:TiledMapTilesetProcessor
+/build:LevelTiles/[A]Wall-Up_pipo.tsx
+
+#begin LevelTiles/[A]Water_pipo.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:LevelTiles/[A]Water_pipo.png
+
+#begin LevelTiles/[A]Water_pipo.tsx
+/importer:TiledMapTilesetImporter
+/processor:TiledMapTilesetProcessor
+/build:LevelTiles/[A]Water_pipo.tsx
+
+#begin LevelTiles/[A]WaterFall_pipo.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:LevelTiles/[A]WaterFall_pipo.png
+
+#begin LevelTiles/[A]WaterFall_pipo.tsx
+/importer:TiledMapTilesetImporter
+/processor:TiledMapTilesetProcessor
+/build:LevelTiles/[A]WaterFall_pipo.tsx
+
+#begin LevelTiles/[Base]BaseChip_pipo.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:LevelTiles/[Base]BaseChip_pipo.png
+
+#begin LevelTiles/[Base]BaseChip_pipo.tsx
+/importer:TiledMapTilesetImporter
+/processor:TiledMapTilesetProcessor
+/build:LevelTiles/[Base]BaseChip_pipo.tsx
+
+#begin LevelTiles/LightShadow_pipo.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:LevelTiles/LightShadow_pipo.png
+
+#begin LevelTiles/LightShadow_pipo.tsx
+/importer:TiledMapTilesetImporter
+/processor:TiledMapTilesetProcessor
+/build:LevelTiles/LightShadow_pipo.tsx
+
+#begin LevelTiles/samplemap.tmx
+/importer:TiledMapImporter
+/processor:TiledMapProcessor
+/build:LevelTiles/samplemap.tmx

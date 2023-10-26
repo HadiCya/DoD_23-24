@@ -1,19 +1,40 @@
-﻿<Properties StartupConfiguration="{8F4A1029-6144-4E60-8FB0-4CD968C32929}|Default">
+﻿<Properties StartupConfiguration="{8F4A1029-6144-4E60-8FB0-4CD968C32929}|Default" NuGet.AddPackagesDialog.IncludePrerelease="True">
+  <MonoDevelop.Ide.ItemProperties.DoD__23-24 PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Main.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Source/Gameplay/World/World.cs">
     <Files>
-      <File FileName="Game1.cs" Line="25" Column="1" />
+      <File FileName="Main.cs" />
+      <File FileName="Source/Gameplay/World/World.cs" Line="22" Column="20" />
+      <File FileName="Source/Engine/Globals.cs" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
-        <State name="__root__" />
+        <State name="__root__">
+          <Node name="DoD_23-24">
+            <Node name="DoD_23-24">
+              <Node name="Dependencies" expanded="True">
+                <Node name="PackageDependencies" expanded="True" />
+              </Node>
+              <Node name="Content" expanded="True" />
+              <Node name="Source" expanded="True">
+                <Node name="Gameplay" expanded="True">
+                  <Node name="World" expanded="True">
+                    <Node name="World.cs" selected="True" />
+                  </Node>
+                </Node>
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.ItemProperties.DoD__23-24 PreferredExecutionTarget="MonoDevelop.Default" />
+  <MultiItemStartupConfigurations />
 </Properties>

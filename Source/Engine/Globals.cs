@@ -19,6 +19,7 @@ namespace DoD_23_24
     class Globals
     {
         public static ContentManager content;
+        public static GraphicsDevice graphics;
         public static SpriteBatch spriteBatch;
         public static int WIDTH = 960, HEIGHT = 600;
     }

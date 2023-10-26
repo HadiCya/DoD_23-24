@@ -21,7 +21,8 @@
         ],
         "sources": {
           "/usr/local/share/dotnet/library-packs": {},
-          "https://api.nuget.org/v3/index.json": {}
+          "https://api.nuget.org/v3/index.json": {},
+          "https://www.myget.org/F/lithiumtoast/api/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
@@ -39,25 +40,57 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
-            "LDtkMonogame": {
-              "target": "Package",
-              "version": "[1.1.2, )"
-            },
             "MonoGame.Content.Builder.Task": {
               "target": "Package",
               "version": "[3.8.1.303, )"
             },
             "MonoGame.Extended": {
               "target": "Package",
-              "version": "[3.8.0, )"
+              "version": "[3.9.0-alpha0107, )"
+            },
+            "MonoGame.Extended.Collisions": {
+              "target": "Package",
+              "version": "[3.9.0-alpha0107, )"
             },
             "MonoGame.Extended.Content.Pipeline": {
               "target": "Package",
-              "version": "[3.8.0, )"
+              "version": "[3.9.0-alpha0107, )"
+            },
+            "MonoGame.Extended.Entities": {
+              "target": "Package",
+              "version": "[3.9.0-alpha0107, )"
+            },
+            "MonoGame.Extended.Graphics": {
+              "target": "Package",
+              "version": "[3.9.0-alpha0107, )"
+            },
+            "MonoGame.Extended.Gui": {
+              "target": "Package",
+              "version": "[3.9.0-alpha0107, )"
+            },
+            "MonoGame.Extended.Input": {
+              "target": "Package",
+              "version": "[3.9.0-alpha0107, )"
+            },
+            "MonoGame.Extended.Particles": {
+              "target": "Package",
+              "version": "[3.9.0-alpha0107, )"
+            },
+            "MonoGame.Extended.SceneGraphs": {
+              "target": "Package",
+              "version": "[3.9.0-alpha0045, )"
             },
             "MonoGame.Extended.Tiled": {
               "target": "Package",
-              "version": "[3.8.0, )"
+              "version": "[3.9.0-alpha0107, )"
+            },
+            "MonoGame.Extended.Transform": {
+              "target": "Package",
+              "version": "[3.8.0-pullrequest0677-0089, )"
+            },
+            "MonoGame.Extended.Tweening": {
+              "target": "Package",
+              "version": "[3.9.0-alpha0107, )"
             },
             "MonoGame.Framework.DesktopGL": {
               "target": "Package",

@@ -8,7 +8,6 @@ public class Main : Game
     private GraphicsDeviceManager _graphics;
 
     World world;
-    Player player;
 
     public Main()
     {
@@ -30,11 +29,10 @@ public class Main : Game
     {
         Globals.content = this.Content;
         Globals.spriteBatch = new SpriteBatch(GraphicsDevice);
+        Globals.graphics = GraphicsDevice;
 
         // TODO: use this.Content to load your game content here
-        player = new Player("2D/Sprites/Item", new Vector2(500, 500), new Vector2(32, 32), true);
-
-        world = new World(player);
+        world = new World();
     }
 
     protected override void Update(GameTime gameTime)
