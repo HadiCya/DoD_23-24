@@ -63,3 +63,4 @@ monodroid*.msi
 *.VC.opendb
 
 artifacts/
+.vs/DoD_23-24/xs/UserPrefs.xml
