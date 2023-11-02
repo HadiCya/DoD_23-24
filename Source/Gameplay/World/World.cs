@@ -24,35 +24,45 @@ namespace DoD_23_24
     {
         TileMapManager mapManager;
         TmxMap map;
+        private List<Rectangle> collisionObjects;
+
         Player playerInstance;
-        NPC npcInstance;
-        Dialogue dialogueInstance;
-        List<string> conversation = new List<string> { "Hello", "I am book." };
 
         public World()
         {
-            map = new TmxMap("Content\\map.tmx");
-            var tileSet = Globals.content.Load<Texture2D>("Tiny Adventure Pack\\" + map.Tilesets[0].Name.ToString());
-            var tileWidth = map.Tilesets[0].TileWidth;
-            var tileHeight = map.Tilesets[0].TileHeight;
-            var tileSetTilesWide = tileSet.Width / tileWidth;
+            map = new TmxMap("Content/map.tmx");
+            Texture2D tileSet = Globals.content.Load<Texture2D>("Tiny Adventure Pack\\" + map.Tilesets[0].Name.ToString());
+            int tileWidth = map.Tilesets[0].TileWidth;
+            int tileHeight = map.Tilesets[0].TileHeight;
+            int tileSetTilesWide = tileSet.Width / tileWidth;
             mapManager = new TileMapManager(Globals.spriteBatch, map, tileSet, tileSetTilesWide, tileWidth, tileHeight);
 
-            playerInstance = new Player("2D/Sprites/Item", new Vector2(100, 100), new Vector2(32, 32), true);
-            npcInstance = new NPC("2D/Sprites/Special1", new Vector2(100, 200), new Vector2(32, 32), true, new Dialogue(conversation));
+            collisionObjects = new List<Rectangle>();
+            foreach(var o in map.ObjectGroups["Collisions"].Objects)
+            {
+                collisionObjects.Add(new Rectangle((int)o.X, (int)o.Y, (int)o.Width, (int)o.Height));
+            }
+
+            playerInstance = new Player("2D/Sprites/Item", new Vector2(100, 100), new Vector2(16, 16), true);
         }
 
         public virtual void Update(GameTime gameTime)
         {
+            var initPos = playerInstance.pos;
             playerInstance.Update(gameTime);
-            npcInstance.Update(gameTime);
+            foreach(var rect in collisionObjects)
+            {
+                if (rect.Intersects(playerInstance.playerBounds))
+                {
+                    playerInstance.pos = initPos;
+                }
+            }
         }
 
         public virtual void Draw()
         {
             mapManager.Draw();
             playerInstance.Draw();
-            npcInstance.Draw();
         }
 
         public Player GetPlayer()

@@ -43,11 +43,7 @@ namespace DoD_23_24
                 for(int j = 0; j < map.Layers[i].Tiles.Count; j++)
                 {
                     int gid = map.Layers[i].Tiles[j].Gid;
-                    if(gid == 0)
-                    {
-                        //does nothing
-                    }
-                    else
+                    if(gid != 0)
                     {
                         int tileFrame = gid - 1;
                         int column = tileFrame % tilesetTilesWide;
