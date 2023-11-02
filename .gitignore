@@ -64,3 +64,5 @@ monodroid*.msi
 
 artifacts/
 .vs/DoD_23-24/xs/UserPrefs.xml
+
+.vs/DoD_23-24/FileContentIndex/*.vsidx
