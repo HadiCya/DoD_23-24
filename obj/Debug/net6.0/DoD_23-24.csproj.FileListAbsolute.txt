@@ -75,3 +75,9 @@
 /Users/hadi/Desktop/DoD_23-24/obj/Debug/net6.0/DoD_23-24.pdb
 /Users/hadi/Desktop/DoD_23-24/obj/Debug/net6.0/DoD_23-24.genruntimeconfig.cache
 /Users/hadi/Desktop/DoD_23-24/obj/Debug/net6.0/ref/DoD_23-24.dll
+/Users/hadi/Desktop/DoD_23-24/bin/Debug/net6.0/Content/2D/Sprites/DialogueBox.xnb
+/Users/hadi/Desktop/DoD_23-24/bin/Debug/net6.0/Content/2D/UI/DefaultFont.xnb
+/Users/hadi/Desktop/DoD_23-24/bin/Debug/net6.0/Content/2D/Sprites/Special1.png
+/Users/hadi/Desktop/DoD_23-24/bin/Debug/net6.0/Content/2D/Sprites/Item.png
+/Users/hadi/Desktop/DoD_23-24/bin/Debug/net6.0/Content/2D/Sprites/DialogueBox.png
+/Users/hadi/Desktop/DoD_23-24/bin/Debug/net6.0/Content/2D/Sprites/Special1.xnb

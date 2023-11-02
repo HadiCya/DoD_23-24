@@ -24,13 +24,13 @@ namespace DoD_23_24
 
         public override void Update(GameTime gameTime)
         {
-
+            dialogue.Update(gameTime);
             base.Update(gameTime);
         }
 
         public override void Draw()
         {
-
+            dialogue.Draw();
             base.Draw();
         }
     }

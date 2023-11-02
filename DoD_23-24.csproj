@@ -34,6 +34,9 @@
     <None Remove="Content\LevelTiles\LightShadow_pipo.png" />
     <None Remove="Content\LevelTiles\LightShadow_pipo.tsx" />
     <None Remove="Content\LevelTiles\samplemap.tmx" />
+    <None Remove="Content\2D\Sprites\Special1.png" />
+    <None Remove="Content\2D\Sprites\Item.png" />
+    <None Remove="Content\2D\Sprites\DialogueBox.png" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Icon.ico" />
@@ -111,6 +114,15 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Content\LevelTiles\samplemap.tmx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\2D\Sprites\Special1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\2D\Sprites\Item.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\2D\Sprites\DialogueBox.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

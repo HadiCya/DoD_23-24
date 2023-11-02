@@ -27,7 +27,35 @@
 /build:2D/Sprites/DialogueBox.png
 
 #begin 2D/Sprites/Item.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
 /build:2D/Sprites/Item.png
+
+#begin 2D/Sprites/Special1.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:2D/Sprites/Special1.png
+
+#begin 2D/UI/DefaultFont.spritefont
+/importer:FontDescriptionImporter
+/processor:FontDescriptionProcessor
+/processorParam:PremultiplyAlpha=True
+/processorParam:TextureFormat=Compressed
+/build:2D/UI/DefaultFont.spritefont
 
 #begin LevelTiles/[A]Dirt_pipo.png
 /importer:TextureImporter
@@ -45,11 +73,6 @@
 /importer:TiledMapTilesetImporter
 /processor:TiledMapTilesetProcessor
 /build:LevelTiles/[A]Dirt_pipo.tsx
-
-
-
-#begin 2D/Sprites/Special1.png
-/build:2D/Sprites/Special1.png
 
 #begin LevelTiles/[A]Flower_pipo.png
 /importer:TextureImporter
@@ -175,9 +198,3 @@
 /processor:TiledMapProcessor
 /build:LevelTiles/samplemap.tmx
 
-#begin 2D/UI/DefaultFont.spritefont
-/importer:FontDescriptionImporter
-/processor:FontDescriptionProcessor
-/processorParam:PremultiplyAlpha=True
-/processorParam:TextureFormat=Compressed
-/build:2D/UI/DefaultFont.spritefont
