@@ -12,15 +12,14 @@ using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Media;
-using MonoGame.Extended.Timers;
 #endregion
 namespace DoD_23_24
 {
 	public class Player : Basic2D
 	{
-        float speed = 50f;
-
         Texture2D playerSprite;
+        float speed = 50f;
+        Matrix translation;
 
         public Player(string PATH, Vector2 POS, Vector2 DIMS, bool shouldScale) : base(PATH, POS, DIMS, shouldScale)
 		{
@@ -29,6 +28,7 @@ namespace DoD_23_24
         public override void Update(GameTime gameTime)
         {
             Movement(gameTime);
+            CalculateTranslation();
 
             base.Update(gameTime);
         }
@@ -61,6 +61,18 @@ namespace DoD_23_24
             {
                 pos.X += speed * (float)gameTime.ElapsedGameTime.TotalSeconds;
             }
+        }
+
+        private void CalculateTranslation()
+        {
+            var dx = (Globals.WIDTH / 2) - pos.X;
+            var dy = (Globals.HEIGHT / 2) - pos.Y;
+            translation = Matrix.CreateTranslation(dx, dy, 0f);
+        }
+
+        public Matrix GetTranslation()
+        {
+            return translation;
         }
     }
 }

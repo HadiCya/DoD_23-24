@@ -12,7 +12,6 @@ using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Media;
-using MonoGame.Extended.Tiled;
 #endregion
 
 namespace DoD_23_24
@@ -23,7 +22,6 @@ namespace DoD_23_24
         public static GraphicsDevice graphics;
         public static SpriteBatch spriteBatch;
         public static GameWindow window;
-        public static TiledMapTileLayer collision;
         public static int WIDTH = 960, HEIGHT = 600;
     }
 }

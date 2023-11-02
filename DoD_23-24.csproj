@@ -11,6 +11,8 @@
     <ApplicationIcon>Icon.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
+    <None Remove="Content\map.tmx" />
+    <None Remove="Content\Tiny Adventure Pack\env.png" />
     <None Remove="Icon.ico" />
     <None Remove="Icon.bmp" />
     <None Remove="Content\2D\" />
@@ -46,18 +48,7 @@
     <PackageReference Include="MonoGame.Framework.DesktopGL" Version="3.8.1.303" />
     <PackageReference Include="MonoGame.Content.Builder.Task" Version="3.8.1.303" />
     <PackageReference Include="system.text.json" Version="7.0.3" />
-    <PackageReference Include="MonoGame.Extended" Version="3.9.0-alpha0107" />
-    <PackageReference Include="MonoGame.Extended.Content.Pipeline" Version="3.9.0-alpha0107" />
-    <PackageReference Include="MonoGame.Extended.Graphics" Version="3.9.0-alpha0107" />
-    <PackageReference Include="MonoGame.Extended.Tiled" Version="3.9.0-alpha0107" />
-    <PackageReference Include="MonoGame.Extended.Input" Version="3.9.0-alpha0107" />
-    <PackageReference Include="MonoGame.Extended.Collisions" Version="3.9.0-alpha0107" />
-    <PackageReference Include="MonoGame.Extended.Entities" Version="3.9.0-alpha0107" />
-    <PackageReference Include="MonoGame.Extended.Gui" Version="3.9.0-alpha0107" />
-    <PackageReference Include="MonoGame.Extended.Particles" Version="3.9.0-alpha0107" />
-    <PackageReference Include="MonoGame.Extended.SceneGraphs" Version="3.9.0-alpha0045" />
-    <PackageReference Include="MonoGame.Extended.Transform" Version="3.8.0-pullrequest0677-0089" />
-    <PackageReference Include="MonoGame.Extended.Tweening" Version="3.9.0-alpha0107" />
+    <PackageReference Include="TiledSharp" Version="1.0.1" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Content\Audio\" />
@@ -123,6 +114,12 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Content\2D\Sprites\DialogueBox.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\map.tmx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Tiny Adventure Pack\env.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

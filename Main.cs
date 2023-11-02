@@ -54,7 +54,7 @@ public class Main : Game
 
         // TODO: Add your drawing code here
 
-        Globals.spriteBatch.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend);
+        Globals.spriteBatch.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend, transformMatrix: world.GetPlayer().GetTranslation());
 
         world.Draw();
 
