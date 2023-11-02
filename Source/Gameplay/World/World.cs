@@ -28,29 +28,28 @@ namespace DoD_23_24
         Map map;
         Player playerInstance;
         NPC npcInstance;
+        Dialogue dialogueInstance;
         List<string> conversation = new List<string> { "Hello", "I am book." };
 
         public World()
         {
             map = new Map();
             playerInstance = new Player("2D/Sprites/Item", new Vector2(500, 100), new Vector2(32, 32), true);
-            //npcInstance = new NPC("2D/Sprites/Special1", new Vector2(700, 100), new Vector2(32, 32), true, new Dialogue(conversation));
-            
+            npcInstance = new NPC("2D/Sprites/Special1", new Vector2(700, 100), new Vector2(32, 32), true, new Dialogue(conversation));
         }
 
         public virtual void Update(GameTime gameTime)
         {
             map.Update(gameTime);
             playerInstance.Update(gameTime);
-            //npcInstance.Update(gameTime);
+            npcInstance.Update(gameTime);
         }
 
         public virtual void Draw()
         {
             map.Draw();
             playerInstance.Draw();
-            //npcInstance.Draw();
-
+            npcInstance.Draw();
         }
     }
 }

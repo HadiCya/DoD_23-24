@@ -17,10 +17,10 @@ namespace DoD_23_24
     internal class Dialogue
     {
         private Texture2D texture;
-        private string text;
         private Texture2D face;
-        private List<string> conversation;
 
+        private string text;
+        private List<string> conversation;
         private SpriteFont font;
         private int currentText = 0;
 
@@ -46,17 +46,19 @@ namespace DoD_23_24
         {
             if (Keyboard.GetState().IsKeyDown(Keys.Space) && !isPressed)
             {
-                if(currentText == 0)
+                if (currentText >= conversation.Count)
                 {
-                    isPressed = true;
+                    isShowing = false;
+                    currentText = 0;
                 }
                 else
                 {
                     isShowing = true;
-                    currentText++;
-                    text = conversation[currentText];
-                    isPressed = true;
                 }
+
+                text = conversation[currentText];
+                currentText++;
+                isPressed = true;
             }
 
             if (Keyboard.GetState().IsKeyUp(Keys.Space))

@@ -18,7 +18,7 @@ namespace DoD_23_24
 {
 	public class Player : Basic2D
 	{
-        float speed = 100f;
+        float speed = 50f;
 
         Texture2D playerSprite;
 
