@@ -17,11 +17,12 @@ namespace DoD_23_24
 {
 	public class Player : Basic2D
 	{
-        float speed = 50f;
+        public float speed = 50f;
         Matrix translation;
         public Rectangle playerBounds;
-        private float zoom = 2.0f;
+        public float zoom = 2.0f;
         private Level level;
+        public static bool movementDisabled = false;
 
         public Player(string PATH, Vector2 POS, Vector2 DIMS, bool shouldScale, Level level) : base(PATH, POS, DIMS, shouldScale)
 		{
@@ -44,6 +45,11 @@ namespace DoD_23_24
 
         public void Movement(GameTime gameTime)
         {
+            if (movementDisabled)
+            {
+                return;
+            }
+
             var kstate = Keyboard.GetState();
 
             Vector2 initPos = pos;
@@ -84,6 +90,11 @@ namespace DoD_23_24
             return pos;
         }
 
+        public Rectangle getRectangle()
+        {
+            return playerBounds;
+        }
+
         public void setPos(Vector2 pos)
         {
             this.pos = pos;
@@ -92,6 +103,11 @@ namespace DoD_23_24
         public Matrix GetTranslation()
         {
             return translation;
+        }
+
+        public void FreezePlayer(bool b)
+        {
+            movementDisabled = !b;
         }
     }
 }
