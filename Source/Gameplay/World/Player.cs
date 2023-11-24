@@ -15,99 +15,24 @@ using Microsoft.Xna.Framework.Media;
 #endregion
 namespace DoD_23_24
 {
-	public class Player : Basic2D
+	public class Player : Entity
 	{
-        public float speed = 50f;
-        Matrix translation;
-        public Rectangle playerBounds;
-        public float zoom = 2.0f;
-        private Level level;
-        public static bool movementDisabled = false;
-
-        public Player(string PATH, Vector2 POS, Vector2 DIMS, bool shouldScale, Level level) : base(PATH, POS, DIMS, shouldScale)
+        public Player(string PATH, Vector2 POS, float ROT, Vector2 DIMS)
 		{
-            playerBounds = new Rectangle((int)pos.X - (int)(dims.X/2), (int)pos.Y - (int)(dims.Y / 2), (int)dims.X, (int)dims.Y);
-            this.level = level;
+            this.AddComponent(new TransformComponent(this, POS, ROT, DIMS));
+            this.AddComponent(new RenderComponent(this, PATH));
+            this.AddComponent(new CameraComponent(this));
+            this.AddComponent(new InputComponent(this));
         }
 
-        public override void Update(GameTime gameTime)
+        public void Update(GameTime gameTime)
         {
-            Movement(gameTime);
-            CalculateTranslation();
-
-            base.Update(gameTime);
+            this.GetComponent<InputComponent>().Movement(gameTime);
         }
 
-        public override void Draw()
+        public void Draw()
         {
-            base.Draw();
-        }
-
-        public void Movement(GameTime gameTime)
-        {
-            if (movementDisabled)
-            {
-                return;
-            }
-
-            var kstate = Keyboard.GetState();
-
-            Vector2 initPos = pos;
-
-            if (kstate.IsKeyDown(Keys.Left))
-            {
-                pos.X -= speed * zoom * (float)gameTime.ElapsedGameTime.TotalSeconds;
-            }
-
-            if (kstate.IsKeyDown(Keys.Right))
-            {
-                pos.X += speed * zoom * (float)gameTime.ElapsedGameTime.TotalSeconds;
-            }
-            playerBounds.X = (int)pos.X - (int)(dims.X / 2);
-            if (level.CheckCollision(playerBounds)) pos.X = initPos.X;
-
-            if (kstate.IsKeyDown(Keys.Up))
-            {
-                pos.Y -= speed * zoom * (float)gameTime.ElapsedGameTime.TotalSeconds;
-            }
-
-            if (kstate.IsKeyDown(Keys.Down))
-            {
-                pos.Y += speed * zoom * (float)gameTime.ElapsedGameTime.TotalSeconds;
-            }
-            playerBounds.Y = (int)pos.Y - (int)(dims.Y / 2);
-            if (level.CheckCollision(playerBounds)) pos.Y = initPos.Y;
-        }
-
-        private void CalculateTranslation()
-        {
-            var dx = (Globals.WIDTH / (zoom*2)) - playerBounds.X;
-            var dy = (Globals.HEIGHT / (zoom*2)) - playerBounds.Y;
-            translation = Matrix.CreateTranslation(dx, dy, 0f) * Matrix.CreateScale(zoom);
-        }
-
-        public Vector2 getPos() {
-            return pos;
-        }
-
-        public Rectangle getRectangle()
-        {
-            return playerBounds;
-        }
-
-        public void setPos(Vector2 pos)
-        {
-            this.pos = pos;
-        }
-
-        public Matrix GetTranslation()
-        {
-            return translation;
-        }
-
-        public void FreezePlayer(bool b)
-        {
-            movementDisabled = !b;
+            GetComponent<RenderComponent>().Draw();
         }
     }
 }

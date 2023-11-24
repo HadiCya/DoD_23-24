@@ -39,6 +39,7 @@
     <None Remove="Content\2D\Sprites\Special1.png" />
     <None Remove="Content\2D\Sprites\Item.png" />
     <None Remove="Content\2D\Sprites\DialogueBox.png" />
+    <None Remove="Source\Components\" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Icon.ico" />
@@ -54,6 +55,7 @@
     <Folder Include="Content\Audio\" />
     <Folder Include="Content\Fonts\" />
     <Folder Include="Content\LevelTiles\" />
+    <Folder Include="Source\Components\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\LevelTiles\[A]Dirt_pipo.png">

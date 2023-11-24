@@ -8,7 +8,6 @@ public class Main : Game
     private GraphicsDeviceManager _graphics;
 
     World world;
-    Canvas canvas;
 
     public Main()
     {
@@ -34,7 +33,6 @@ public class Main : Game
         Globals.window = this.Window;
 
         world = new World();
-        canvas = new Canvas();
     }
 
     protected override void Update(GameTime gameTime)
@@ -45,7 +43,6 @@ public class Main : Game
         // TODO: Add your update logic here
 
         world.Update(gameTime);
-        canvas.Update(gameTime);
 
         base.Update(gameTime);
     }
@@ -60,15 +57,10 @@ public class Main : Game
         
 
         //Drawing the world
-        Globals.spriteBatch.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend, transformMatrix: world.GetPlayer().GetTranslation());
+        Globals.spriteBatch.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend, transformMatrix: world.playerInstance.GetComponent<CameraComponent>().GetTranslation());
 
         world.Draw();
 
-        Globals.spriteBatch.End();
-
-        //Drawing the canavs
-        Globals.spriteBatch.Begin();
-        canvas.Draw();
         Globals.spriteBatch.End();
 
         base.Draw(gameTime);
