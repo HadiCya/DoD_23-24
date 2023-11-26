@@ -17,22 +17,50 @@ namespace DoD_23_24
 {
 	public class Player : Entity
 	{
-        public Player(string PATH, Vector2 POS, float ROT, Vector2 DIMS)
+        float speed = 50f;
+        TransformComponent transform;
+
+        public Player(string name, string PATH, Vector2 POS, float ROT, Vector2 DIMS) : base(name)
 		{
-            this.AddComponent(new TransformComponent(this, POS, ROT, DIMS));
-            this.AddComponent(new RenderComponent(this, PATH));
-            this.AddComponent(new CameraComponent(this));
-            this.AddComponent(new InputComponent(this));
+            transform = (TransformComponent)AddComponent(new TransformComponent(this, POS, ROT, DIMS));
+            AddComponent(new RenderComponent(this, PATH));
+            AddComponent(new CollisionComponent(this, true));
         }
 
-        public void Update(GameTime gameTime)
+        public override void Update(GameTime gameTime)
         {
-            this.GetComponent<InputComponent>().Movement(gameTime);
+            base.Update(gameTime);
+            Movement(gameTime);
         }
 
-        public void Draw()
+        public void Movement(GameTime gameTime)
         {
-            GetComponent<RenderComponent>().Draw();
+            KeyboardState kstate = Keyboard.GetState();
+
+            if (kstate.IsKeyDown(Keys.Left))
+            {
+                transform.pos.X -= speed * (float)gameTime.ElapsedGameTime.TotalSeconds;
+            }
+
+            if (kstate.IsKeyDown(Keys.Right))
+            {
+                transform.pos.X += speed * (float)gameTime.ElapsedGameTime.TotalSeconds;
+            }
+
+            if (kstate.IsKeyDown(Keys.Up))
+            {
+                transform.pos.Y -= speed * (float)gameTime.ElapsedGameTime.TotalSeconds;
+            }
+
+            if (kstate.IsKeyDown(Keys.Down))
+            {
+                transform.pos.Y += speed * (float)gameTime.ElapsedGameTime.TotalSeconds;
+            }
+        }
+
+        public override void OnCollision(Entity otherEntity)
+        {
+            Console.WriteLine("I'm Colliding!");
         }
     }
 }

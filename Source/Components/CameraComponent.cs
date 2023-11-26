@@ -18,18 +18,18 @@ namespace DoD_23_24
 {
     public class CameraComponent : Component
     {
-        TransformComponent transform;
+        TransformComponent targetTransform;
         public float zoom = 2f;
 
-        public CameraComponent(Player entity) : base(entity)
+        public CameraComponent(Entity entity, Entity target) : base(entity)
         {
-            transform = entity.GetComponent<TransformComponent>();
+            targetTransform = target.GetComponent<TransformComponent>();
         }
 
         public Matrix GetTranslation()
         {
-            var dx = (Globals.WIDTH / (zoom * 2)) - transform.playerBounds.X;
-            var dy = (Globals.HEIGHT / (zoom * 2)) - transform.playerBounds.Y;
+            var dx = (Globals.WIDTH / (zoom * 2)) - (int)targetTransform.pos.X - (int)(targetTransform.dims.X / 2);
+            var dy = (Globals.HEIGHT / (zoom * 2)) - (int)targetTransform.pos.Y - (int)(targetTransform.dims.Y / 2);
             return Matrix.CreateTranslation(dx, dy, 0f) * Matrix.CreateScale(zoom);
         }
     }

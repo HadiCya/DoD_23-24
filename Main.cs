@@ -51,13 +51,8 @@ public class Main : Game
     {
         GraphicsDevice.Clear(Color.Black);
 
-
-        // TODO: Add your drawing code here
-
-        
-
         //Drawing the world
-        Globals.spriteBatch.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend, transformMatrix: world.playerInstance.GetComponent<CameraComponent>().GetTranslation());
+        Globals.spriteBatch.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend, transformMatrix: world.GetCamera().GetComponent<CameraComponent>().GetTranslation());
 
         world.Draw();
 
