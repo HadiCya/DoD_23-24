@@ -38,11 +38,13 @@ namespace DoD_23_24
 						Entity otherEntity = entities[j];
 						CollisionComponent otherCollision = otherEntity.GetComponent<CollisionComponent>();
 
-						if (otherCollision != null)
-						{
+                        if (otherCollision != null && !(entity.name.Substring(0, 5) == "Tile_" && otherEntity.name.Substring(0, 5) == "Tile_"))
+				 		{
 							if (otherCollision.CheckCollision(collision.GetBounds()))
 							{
+								Console.WriteLine(entity.name + " " + otherEntity.name);
                                 collision.ReportCollision(otherEntity);
+								otherCollision.ReportCollision(entity);
 							}
 						}
 					}

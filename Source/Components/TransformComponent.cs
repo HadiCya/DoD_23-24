@@ -26,6 +26,14 @@ namespace DoD_23_24
 			rot = ROT;
 			dims = DIMS;
         }
+
+        public override void Draw()
+        {
+            if (Globals.isDebugOn)
+            {
+                RectangleSprite.DrawRectangle(Globals.spriteBatch, new Rectangle((int)pos.X, (int)pos.Y, (int)dims.X, (int)dims.Y), Color.Blue, 2);
+            }
+        }
     }
 }
 

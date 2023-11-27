@@ -19,24 +19,33 @@ namespace DoD_23_24
     {
         Rectangle bounds;
 
-        bool isRigid;
+        public bool isPhysical, isMoveable;
 
         TransformComponent transform;
 
-        public CollisionComponent(Entity entity, bool isRigid) : base(entity)
+        public CollisionComponent(Entity entity, bool isPhysical, bool isMoveable) : base(entity)
         {
-            this.isRigid = isRigid;
+            this.isPhysical = isPhysical;
+            this.isMoveable = isMoveable;
 
             transform = entity.GetComponent<TransformComponent>();
-            bounds = new Rectangle((int)transform.pos.X - (int)(transform.dims.X / 2), (int)transform.pos.Y - (int)(transform.dims.Y / 2), (int)transform.dims.X, (int)transform.dims.Y);
+            bounds = new Rectangle((int)transform.pos.X, (int)transform.pos.Y, (int)transform.dims.X, (int)transform.dims.Y);
         }
 
         public override void Update(GameTime gameTime)
         {
-            bounds.X = (int)transform.pos.X - (int)(transform.dims.X / 2);
-            bounds.Y = (int)transform.pos.Y - (int)(transform.dims.Y / 2);
+            bounds.X = (int)transform.pos.X;
+            bounds.Y = (int)transform.pos.Y;
             bounds.Width = (int)transform.dims.X;
             bounds.Height = (int)transform.dims.Y;
+        }
+
+        public override void Draw()
+        {
+            if (Globals.isDebugOn)
+            {
+                RectangleSprite.DrawRectangle(Globals.spriteBatch, bounds, Color.Red, 1);
+            }
         }
 
         public void ReportCollision(Entity otherEntity)
@@ -44,7 +53,7 @@ namespace DoD_23_24
             //TODO: Fix jumpiness
             CollisionComponent otherCollision = otherEntity.GetComponent<CollisionComponent>();
 
-            if (isRigid && otherCollision.isRigid)
+            if (isPhysical && otherCollision.isPhysical && isMoveable)
             {
                 Point penetrationDepthVector = bounds.Center - otherCollision.bounds.Center;
                 int overlap = bounds.Width / 2 + otherCollision.bounds.Width / 2 - Math.Abs(penetrationDepthVector.X);
