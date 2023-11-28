@@ -20,20 +20,21 @@ namespace DoD_23_24
 {
     public class NPC : Entity
     {
-        string textPath;
-        string text;
-        int currentText = 0;
-        bool isPressed = false;
-        bool freezePlayer = false;
-        TransformComponent transform;
+        string textPath, text;
+        int currentText;
+        bool freezePlayer;
+
+
         Entity overlapZone;
         private List<string> conversation = new List<string> { };
 
-        public NPC(string name, string PATH, Vector2 POS, float ROT, Vector2 DIMS, Entity PLAYER, string TEXT) : base(name, Layer.NPC)
+        public NPC(string name, string PATH, Vector2 POS, float ROT, Vector2 DIMS, string TEXT) : base(name, Layer.NPC)
         {
-            transform = (TransformComponent)AddComponent(new TransformComponent(this, POS, ROT, DIMS));
+            AddComponent(new TransformComponent(this, POS, ROT, DIMS));
             AddComponent(new RenderComponent(this, PATH));
             AddComponent(new CollisionComponent(this, true, false));
+
+            
             textPath = TEXT;
 
             overlapZone = new Entity("OverlapZone", Layer.NPC);
@@ -47,10 +48,11 @@ namespace DoD_23_24
         {
             base.Update(gameTime);
         }
-        public void SetText(string c)
+
+        public void SetText(string textFilePath)
         {
-            StreamReader sr = new StreamReader(c);
-            String line = sr.ReadLine();
+            StreamReader sr = new StreamReader(textFilePath);
+            string line = sr.ReadLine();
             while (line != null)
             {
                 conversation.Add(line);
