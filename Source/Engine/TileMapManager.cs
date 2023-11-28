@@ -51,7 +51,7 @@ namespace DoD_23_24
                         float y = (float)Math.Floor(j / (double)map.Width) * map.TileHeight;
                         Rectangle tilesetRec = new Rectangle(tileWidth * column, tileHeight * row, tileWidth, tileHeight);
 
-                        Entity tile = new Entity("Tile_" + gid);
+                        Entity tile = new Entity("Tile_" + gid, Layer.Tiles);
                         tile.AddComponent(new TransformComponent(tile, new Vector2(x, y), 0.0f, new Vector2(tileWidth, tileHeight)));
                         tile.AddComponent(new RenderComponent(tile, tileset, tilesetRec));
                         entities.Add(tile);
@@ -60,7 +60,7 @@ namespace DoD_23_24
             }
             foreach (TmxObject o in map.ObjectGroups["Collisions"].Objects)
             {
-                Entity collisionEntity = new Entity("Tile_" + o.Id);
+                Entity collisionEntity = new Entity("Tile_" + o.Id, Layer.Tiles);
                 TransformComponent transform = new TransformComponent(collisionEntity, new Vector2((float)o.X, (float)o.Y), 0.0f, new Vector2((float)o.Width, (float)o.Height));
                 collisionEntity.AddComponent(transform);
                 collisionEntity.AddComponent(new CollisionComponent(collisionEntity, true, false));

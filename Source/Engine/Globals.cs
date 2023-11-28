@@ -23,6 +23,7 @@ namespace DoD_23_24
         public static SpriteBatch spriteBatch;
         public static GameWindow window;
         public static int WIDTH = 960, HEIGHT = 600;
+        public static CollisionSystem collisionSystem;
         public static bool isDebugOn = true;
     }
 }

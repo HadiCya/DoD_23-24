@@ -25,6 +25,8 @@ namespace DoD_23_24
 
         public CollisionComponent(Entity entity, bool isPhysical, bool isMoveable) : base(entity)
         {
+            Globals.collisionSystem.addCollision(entity);
+
             this.isPhysical = isPhysical;
             this.isMoveable = isMoveable;
 
@@ -57,7 +59,10 @@ namespace DoD_23_24
             {
                 Point penetrationDepthVector = bounds.Center - otherCollision.bounds.Center;
                 int overlap = bounds.Width / 2 + otherCollision.bounds.Width / 2 - Math.Abs(penetrationDepthVector.X);
-                
+                Console.WriteLine(bounds.Center + " " + otherCollision.bounds.Center);
+                Console.WriteLine(penetrationDepthVector + " " + overlap);
+
+
                 if (overlap > 0)
                 {
                     if (penetrationDepthVector.X > 0)
@@ -70,19 +75,19 @@ namespace DoD_23_24
                     }
                 }
 
-                overlap = bounds.Height / 2 + otherCollision.bounds.Height / 2 - Math.Abs(penetrationDepthVector.Y);
+                //overlap = bounds.Height / 2 + otherCollision.bounds.Height / 2 - Math.Abs(penetrationDepthVector.Y);
 
-                if (overlap > 0)
-                {
-                    if (penetrationDepthVector.Y > 0)
-                    {
-                        transform.pos.Y += overlap;
-                    }
-                    else
-                    {
-                        transform.pos.Y -= overlap;
-                    }
-                }
+                //if (overlap > 0)
+                //{
+                //    if (penetrationDepthVector.Y > 0)
+                //    {
+                //        transform.pos.Y += overlap;
+                //    }
+                //    else
+                //    {
+                //        transform.pos.Y -= overlap;
+                //    }
+                //}
             }
 
             entity.OnCollision(otherEntity);

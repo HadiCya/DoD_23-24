@@ -17,12 +17,16 @@ namespace DoD_23_24
 {
 	public class CollisionSystem
 	{
-		List<Entity> entities;
+		List<Entity> entities = new List<Entity>();
 
-		public CollisionSystem(List<Entity> entities)
+		public CollisionSystem()
 		{
-			this.entities = entities;
 		}
+
+		public void addCollision(Entity entity)
+		{
+			entities.Add(entity);
+        }
 
 		public void Update(GameTime gameTIme)
 		{
@@ -38,7 +42,7 @@ namespace DoD_23_24
 						Entity otherEntity = entities[j];
 						CollisionComponent otherCollision = otherEntity.GetComponent<CollisionComponent>();
 
-                        if (otherCollision != null && !(entity.name.Substring(0, 5) == "Tile_" && otherEntity.name.Substring(0, 5) == "Tile_"))
+                        if (otherCollision != null && !(entity.layer == Layer.Tiles && otherEntity.layer == Layer.Tiles))
 				 		{
 							if (otherCollision.CheckCollision(collision.GetBounds()))
 							{

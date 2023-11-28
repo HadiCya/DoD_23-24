@@ -20,9 +20,10 @@ namespace DoD_23_24
 	public class Entity
 	{
         public string name;
+        public Layer layer;
 		List<Component> components = new List<Component>();
 
-        public Entity(string name) { this.name = name; }
+        public Entity(string name, Layer layer) { this.name = name; this.layer = layer;  }
 
         public Component GetComponent<Component>()
         {

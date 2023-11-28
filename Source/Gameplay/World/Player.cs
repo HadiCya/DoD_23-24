@@ -20,7 +20,7 @@ namespace DoD_23_24
         float speed = 50f;
         TransformComponent transform;
 
-        public Player(string name, string PATH, Vector2 POS, float ROT, Vector2 DIMS) : base(name)
+        public Player(string name, string PATH, Vector2 POS, float ROT, Vector2 DIMS) : base(name, Layer.Player)
 		{
             transform = (TransformComponent)AddComponent(new TransformComponent(this, POS, ROT, DIMS));
             AddComponent(new RenderComponent(this, PATH));
