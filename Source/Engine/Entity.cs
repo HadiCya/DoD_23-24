@@ -22,6 +22,8 @@ namespace DoD_23_24
         public string name;
         public Layer layer;
 		List<Component> components = new List<Component>();
+        bool isActive = true;
+        Entity parent;
 
         public Entity(string name, Layer layer) { this.name = name; this.layer = layer;  }
 
@@ -46,10 +48,34 @@ namespace DoD_23_24
 
         public virtual void Draw()
         {
+            if(!isActive)
+            {
+                return;
+            }
+
             foreach (Component component in components)
             {
                 component.Draw();
             }
+        }
+
+        public void SetActive(bool active)
+        {
+            isActive = active;
+        }
+        public bool IsActive()
+        {
+            return isActive;
+        }
+
+        public void SetParent(Entity parent)
+        {
+            this.parent = parent;
+        }
+
+        public Entity GetParent()
+        {
+            return parent;
         }
 
         public virtual void OnCollision(Entity otherEntity) { }

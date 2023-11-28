@@ -36,11 +36,15 @@ namespace DoD_23_24
             Entity camera = new Entity("Camera", Layer.Camera);
             camera.AddComponent(new CameraComponent(camera, playerInstance));
 
+            NPC book = new NPC("Book", "2D/Sprites/Special1", new Vector2(80, 64), 0.0f, new Vector2(16, 16), playerInstance, "C:\\Users\\User\\Documents\\GitHub\\DoD_23-24\\Content\\NPCText\\TestNPC.txt");
+
             TileMapGenerator tileMapGenerator = new TileMapGenerator("Content/map.tmx", "Tiny Adventure Pack\\");
             entities.AddRange(tileMapGenerator.GetTiles());
             entities.Add(playerInstance);
             entities.Add(randomThing);
             entities.Add(camera);
+            entities.Add(book);
+            entities.Add(book.GetOverlapZone());
         }
 
         public void Update(GameTime gameTime)

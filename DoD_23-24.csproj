@@ -55,7 +55,6 @@
     <Folder Include="Content\Audio\" />
     <Folder Include="Content\Fonts\" />
     <Folder Include="Content\LevelTiles\" />
-    <Folder Include="Source\Components\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\LevelTiles\[A]Dirt_pipo.png">
