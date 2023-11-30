@@ -1,4 +1,4 @@
-﻿#region Includes
+#region Includes
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,6 +19,9 @@ namespace DoD_23_24
 	{
         TransformComponent transform;
         CollisionComponent collision;
+        bool isPressed = false;
+        bool isFrozen = false;
+
 
         public Player(string name, string PATH, Vector2 POS, float ROT, Vector2 DIMS) : base(name, Layer.Player)
 		{
@@ -35,6 +38,11 @@ namespace DoD_23_24
 
         public void Movement(GameTime gameTime)
         {
+            if(isFrozen)
+            {
+                return;
+            }
+
             KeyboardState kstate = Keyboard.GetState();
 
             //Left
@@ -90,6 +98,26 @@ namespace DoD_23_24
         public override void OnCollision(Entity otherEntity)
         {
             Console.WriteLine("I'm Colliding!");
+
+            if(otherEntity.name == "OverlapZone")
+            {
+                InteractWithNPC(otherEntity);
+            }
+        }
+
+        public void InteractWithNPC(Entity overlapZone)
+        {
+            if (Keyboard.GetState().IsKeyDown(Keys.Space) && !isPressed)
+            {
+                overlapZone.GetComponent<OverlapZoneComponent>().GetParentNPC().Speak();
+                isFrozen = overlapZone.GetComponent<OverlapZoneComponent>().GetParentNPC().CheckIfPlayerFrozen();
+                isPressed = true;
+            }
+
+            if (Keyboard.GetState().IsKeyUp(Keys.Space))
+            {
+                isPressed = false;
+            }
         }
     }
 }

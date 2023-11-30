@@ -3,5 +3,6 @@
     Player,
     Tiles,
     NPC,
-    Camera
+    Camera,
+    UI
 }
