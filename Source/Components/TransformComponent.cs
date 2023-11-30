@@ -20,7 +20,10 @@ namespace DoD_23_24
 		public Vector2 pos, dims;
 		public float rot, scale;
 
-		public TransformComponent(Entity entity, Vector2 POS, float ROT, Vector2 DIMS) : base(entity)
+        public float speed = 50f;
+        public float xSpeed, ySpeed = 0f;
+
+        public TransformComponent(Entity entity, Vector2 POS, float ROT, Vector2 DIMS) : base(entity)
 		{
 			pos = POS;
 			rot = ROT;
