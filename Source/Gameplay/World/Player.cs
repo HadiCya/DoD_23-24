@@ -17,14 +17,14 @@ namespace DoD_23_24
 {
 	public class Player : Entity
 	{
-        float speed = 50f;
         TransformComponent transform;
+        CollisionComponent collision;
 
         public Player(string name, string PATH, Vector2 POS, float ROT, Vector2 DIMS) : base(name, Layer.Player)
 		{
             transform = (TransformComponent)AddComponent(new TransformComponent(this, POS, ROT, DIMS));
             AddComponent(new RenderComponent(this, PATH));
-            AddComponent(new CollisionComponent(this, true, true));
+            collision = (CollisionComponent)AddComponent(new CollisionComponent(this, true, true));
         }
 
         public override void Update(GameTime gameTime)
@@ -37,25 +37,54 @@ namespace DoD_23_24
         {
             KeyboardState kstate = Keyboard.GetState();
 
+            //Left
             if (kstate.IsKeyDown(Keys.Left))
             {
-                transform.pos.X -= speed * (float)gameTime.ElapsedGameTime.TotalSeconds;
+                transform.xSpeed = -transform.speed;
             }
 
+            if (kstate.IsKeyUp(Keys.Left))
+            {
+                transform.xSpeed = 0f;
+                collision.leftCollisionForce = 0f;
+            }
+
+            //Right
             if (kstate.IsKeyDown(Keys.Right))
             {
-                transform.pos.X += speed * (float)gameTime.ElapsedGameTime.TotalSeconds;
+                transform.xSpeed = transform.speed;
             }
 
+            if (kstate.IsKeyUp(Keys.Right))
+            {
+                collision.rightCollisionForce = 0f;
+            }
+
+            //Up
             if (kstate.IsKeyDown(Keys.Up))
             {
-                transform.pos.Y -= speed * (float)gameTime.ElapsedGameTime.TotalSeconds;
+                transform.ySpeed = -transform.speed;
             }
 
+            if (kstate.IsKeyUp(Keys.Up))
+            {
+                transform.ySpeed = 0f;
+                collision.upCollisionForce = 0f;
+            }
+
+            //Down
             if (kstate.IsKeyDown(Keys.Down))
             {
-                transform.pos.Y += speed * (float)gameTime.ElapsedGameTime.TotalSeconds;
+                transform.ySpeed = transform.speed;
             }
+
+            if (kstate.IsKeyUp(Keys.Down))
+            {
+                collision.downCollisionForce = 0f;
+            }
+
+            transform.pos.X += (transform.xSpeed + collision.leftCollisionForce + collision.rightCollisionForce) * (float)gameTime.ElapsedGameTime.TotalSeconds;
+            transform.pos.Y += (transform.ySpeed + collision.upCollisionForce + collision.downCollisionForce) * (float)gameTime.ElapsedGameTime.TotalSeconds;
         }
 
         public override void OnCollision(Entity otherEntity)
