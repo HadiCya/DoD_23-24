@@ -20,7 +20,6 @@ namespace DoD_23_24
         Rectangle bounds;
 
         public bool isPhysical, isMoveable;
-        public float leftCollisionForce = 0f, rightCollisionForce = 0f, upCollisionForce = 0f, downCollisionForce = 0f;
 
         TransformComponent transform;
 
@@ -60,23 +59,35 @@ namespace DoD_23_24
             {
                 Point penetrationDepthVector = bounds.Center - otherCollision.bounds.Center;
                 int overlap = bounds.Width / 2 + otherCollision.bounds.Width / 2 - Math.Abs(penetrationDepthVector.X);
-                if (penetrationDepthVector.X > 0)
+                Console.WriteLine(bounds.Center + " " + otherCollision.bounds.Center);
+                Console.WriteLine(penetrationDepthVector + " " + overlap);
+
+
+                if (overlap > 0)
                 {
-                    leftCollisionForce = transform.speed;
-                }
-                if (penetrationDepthVector.X < 0)
-                {
-                    rightCollisionForce = -transform.speed;
+                    if (penetrationDepthVector.X > 0)
+                    {
+                        transform.pos.X += overlap;
+                    }
+                    else
+                    {
+                        transform.pos.X -= overlap;
+                    }
                 }
 
-                if (penetrationDepthVector.Y > 0)
-                {
-                    upCollisionForce = transform.speed;
-                }
-                if (penetrationDepthVector.Y < 0)
-                {
-                    downCollisionForce = -transform.speed;
-                }
+                //overlap = bounds.Height / 2 + otherCollision.bounds.Height / 2 - Math.Abs(penetrationDepthVector.Y);
+
+                //if (overlap > 0)
+                //{
+                //    if (penetrationDepthVector.Y > 0)
+                //    {
+                //        transform.pos.Y += overlap;
+                //    }
+                //    else
+                //    {
+                //        transform.pos.Y -= overlap;
+                //    }
+                //}
             }
 
             entity.OnCollision(otherEntity);
